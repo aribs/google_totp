@@ -4,7 +4,7 @@ const QRCode = require("qrcode");
 // Generate la key
 const secret = speakeasy.generateSecret({ length: 20 });
 
-// Function to generate a QR code URL for Google Authenticator
+// Genero el código QR
 function generateQRCodeURL() {
   return new Promise((resolve, reject) => {
     QRCode.toDataURL(secret.otpauth_url, (err, dataURL) => {
@@ -17,7 +17,6 @@ function generateQRCodeURL() {
   });
 }
 
-// Generate and display the QR code URL
 generateQRCodeURL()
   .then((dataURL) => {
     console.log("Scan the QR code with the Google Authenticator app:");

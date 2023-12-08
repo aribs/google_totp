@@ -4,7 +4,7 @@ const verifyOTP = require("./verify");
 // const secretKey = generate_secret_key();
 // console.log(secretKey);
 
-const userOTP = "434634"; // Replace with the OTP entered by the user
+const userOTP = "871183"; // userOtp que obtengo
 
 const verificationResult = verifyOTP(userOTP);
 
